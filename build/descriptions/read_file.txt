@@ -1,0 +1,14 @@
+Read a UTF-8 text file from the workspace and return it with line numbers.
+
+## When to use
+- Before editing any file you have not already read this session. edit_file
+  requires a match against the real contents and will refuse otherwise.
+- When you need to see actual code rather than just locate it.
+- Call it in parallel when you know you want several files.
+
+## When NOT to use
+- To find which files exist - use list_files.
+
+## Notes
+- Output is `<line number><tab><content>`. The line number and tab are NOT
+  part of the file. Never include them in an edit_file `old` string.

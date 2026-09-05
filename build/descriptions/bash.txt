@@ -1,0 +1,19 @@
+Run a shell command in the workspace and return exit code, stdout and stderr.
+
+## When to use
+- Running tests, linters, builds, or a formatter.
+- Inspecting state the other tools do not expose (git status, installed
+  packages, environment).
+- Anything with no dedicated tool.
+
+## When NOT to use
+- Reading files - use read_file, which gives line numbers you will need for
+  editing. `cat` does not.
+- Finding files - use list_files.
+
+## Notes
+- Runs with the workspace as the working directory. Times out after 30s.
+- Commands that wait for input will hang until the timeout. Use
+  non-interactive flags.
+- Verify your own work with this tool. A change is not done until something
+  has actually run and passed.

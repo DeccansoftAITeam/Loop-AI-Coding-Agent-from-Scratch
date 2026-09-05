@@ -1,0 +1,12 @@
+List files in the workspace matching a glob pattern.
+
+## When to use
+- First, when you do not yet know what the codebase contains. Discovering
+  structure is much cheaper than guessing filenames and reading blindly.
+- To check whether a file exists before reading it.
+
+## When NOT to use
+- To search inside files - use read_file once you know what to open.
+
+## Notes
+- Patterns match the whole relative path, e.g. `*.py`, `src/**/*.ts`.

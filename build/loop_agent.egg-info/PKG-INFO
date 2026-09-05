@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: loop-agent
+Version: 0.1.0
+Summary: A coding agent in ~200 lines
+Requires-Python: >=3.10
+Requires-Dist: anthropic
+Requires-Dist: python-dotenv
+Requires-Dist: pytest

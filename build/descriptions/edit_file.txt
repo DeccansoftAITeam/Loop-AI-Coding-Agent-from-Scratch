@@ -1,0 +1,21 @@
+Replace one occurrence of `old` with `new` in an existing file.
+
+## When to use
+- Any change to a file that already exists. Preferred over write_file,
+  because a bad assumption fails loudly here instead of silently destroying
+  the parts of the file you did not think to include.
+
+## Requirements
+- You must read the file with read_file first, this session. The edit is
+  refused otherwise - your idea of the contents has to come from the file,
+  not from memory.
+- `old` must identify exactly one place in the file. If it appears more than
+  once, include more surrounding lines until it is unique.
+- Copy `old` from read_file output WITHOUT the line-number prefix. The format
+  is `<number><tab><content>`; only the content after the tab is in the file.
+
+## Notes
+- Whitespace and indentation should match, but small differences in leading
+  or trailing whitespace are tolerated and reported back to you.
+- The edit is refused if the matched region is much larger than `old` - that
+  means the match was too loose to trust. Re-read and supply exact text.

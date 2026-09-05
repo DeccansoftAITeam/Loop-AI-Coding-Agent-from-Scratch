@@ -1,0 +1,13 @@
+Create a new file, or completely replace an existing one.
+
+## When to use
+- Creating a file that does not exist yet.
+- A rewrite so extensive that a targeted edit makes no sense.
+
+## When NOT to use
+- Changing part of an existing file. Use edit_file. write_file replaces the
+  whole file, so anything you did not include is destroyed silently - and
+  unlike a failed edit, nothing tells you it happened.
+
+## Notes
+- Parent directories are created automatically. There is no append mode.

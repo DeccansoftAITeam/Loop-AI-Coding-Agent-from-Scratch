@@ -1,0 +1,14 @@
+cli.py
+config.py
+filetools.py
+pyproject.toml
+step08_file_agent.py
+step09_full_agent.py
+step10_system_prompt.py
+step11_traced_agent.py
+loop_agent.egg-info/PKG-INFO
+loop_agent.egg-info/SOURCES.txt
+loop_agent.egg-info/dependency_links.txt
+loop_agent.egg-info/entry_points.txt
+loop_agent.egg-info/requires.txt
+loop_agent.egg-info/top_level.txt
